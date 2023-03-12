@@ -241,6 +241,7 @@ h1 a {
   height: 17.5rem;
 }
 
+/*Responsive*/
 @media (min-width: 320px) {
   .header__wrapper {
     max-width: 38rem;
