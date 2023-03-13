@@ -1,0 +1,310 @@
+/*reset css*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*font family*/
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/poppins-v19-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/poppins-v19-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/poppins-v19-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/poppins-v19-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* el-messiri-700 - latin */
+@font-face {
+  font-family: "El Messiri";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/el-messiri-v14-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/el-messiri-v14-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-regular - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/lato-v22-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/lato-v22-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/lato-v22-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/lato-v22-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/*end of reset css*/
+body {
+  margin: 0;
+  font-family: Poppins, El Messiri;
+  font-style: normal;
+  line-height: 1.2;
+  font-weight: 400;
+  color: black;
+  background-color: #fef8dd;
+  border: none;
+}
+.header__wrapper {
+  max-width: 37rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  width: 81.39%;
+  margin-top: 3rem;
+}
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+h1 a {
+  text-decoration: none;
+  color: black;
+}
+.list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #cbd1d4;
+}
+.item__links {
+  text-decoration: none;
+  color: rgb(66, 66, 219);
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  height: 2.6rem;
+  align-items: center;
+  transition: all 0.6s ease;
+  width: 99%;
+}
+.item__links:hover {
+  color: black;
+}
+.item__links:active + .close__icon {
+  transform: rotate(0.5turn);
+}
+.close__icon {
+  width: 15px;
+  height: 15px;
+  transform: rotate(0.62turn);
+}
+.hide {
+  width: 0;
+  height: 0;
+}
+.hide:checked + .img__link {
+  display: block;
+  height: 19rem;
+}
+.img__link {
+  margin: 0 auto;
+  display: none;
+}
+
+.mem__img {
+  width: 18.75rem;
+  height: 17.5rem;
+}
+
+/*Responsive*/
+@media (min-width: 320px) {
+  .header__wrapper {
+    max-width: 38rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  .item__links {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 938px) {
+  .header__wrapper {
+    max-width: 50rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .item__links {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1300px) {
+  .header__wrapper {
+    max-width: 70rem;
+  }
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  .item__links {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1890px) {
+  .header__wrapper {
+    max-width: 90rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+
+  .item__links {
+    font-size: 3rem;
+  }
+}
