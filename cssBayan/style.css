@@ -218,11 +218,13 @@ h1 a {
   color: rgb(66, 66, 219);
   font-weight: 700;
   font-size: 1.25rem;
-  border-top: 1px solid #cbd1d4;
+  /* border-top: 1px solid #cbd1d4; */
   display: flex;
   height: 2.6rem;
   align-items: center;
   transition: all 0.6s ease;
+  border: 1px solid red;
+  width: 99%;
 }
 .item__links:hover {
   color: black;
@@ -245,10 +247,27 @@ h1 a {
 }
 .hide:checked + .img__link {
   display: block;
+  height: 19rem;
 }
-/* .hide:hover + .img__link {
-  display: block;
+/* .item__links: + .close__icon {
+  display: none;
 } */
+.item__links:active + .close__icon {
+  transform: rotate(0.5turn);
+}
+.close {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #cbd1d4;
+}
+.close__icon {
+  width: 15px;
+  height: 15px;
+  transform: rotate(0.62turn);
+}
+
 /*Responsive*/
 @media (min-width: 320px) {
   .header__wrapper {
